@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+
+.App-body {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-title {
+  font-size: 24PX;
+  height: 30px;
+  width: 100px;
+  outline: 3px solid pink;
+}
+
+.App-description {
+  outline: 1px solid pink;
+  font-size: 16PX;
+}
