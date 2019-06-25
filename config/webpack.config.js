@@ -108,7 +108,8 @@ module.exports = function(webpackEnv) {
       {
         loader: require.resolve('../loaders/px2rem-loader.js'),
         options: {
-          baseSize: 16
+          rootSize: 16,
+          fixedNumber: 2
         }
       },
     ].filter(Boolean);

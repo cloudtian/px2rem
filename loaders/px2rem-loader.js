@@ -1,15 +1,21 @@
 const loaderUtils = require('loader-utils');
 
+/**
+ * options:
+ * {Number} rootSize 根元素的字体大小，默认14
+ * {Number} fixedNumber 保留小数点的位数，默认3
+ */
 module.exports = function generateCode(source) {
+    debugger;
     let code = source.slice(0, -1);
 
     // 获取用户给当前loader传入的options
     const options = loaderUtils.getOptions(this) || {};
 
-    const {baseSize: hfs = 14} = options; // html font-size
+    const {rootSize = 14, fixedNumber = 3} = options;
 
     return code.replace(/(\d+)px/g, (k) => {
-        return `${(parseFloat(k)/hfs).toFixed(3)}rem`;
+        return `${(parseFloat(k)/rootSize).toFixed(parseInt(fixedNumber))}rem`;
     });
 }
 
