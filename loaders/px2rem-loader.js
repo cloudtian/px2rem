@@ -6,7 +6,7 @@ const loaderUtils = require('loader-utils');
  * {Number} fixedNumber 保留小数点的位数，默认3
  */
 module.exports = function generateCode(source) {
-    debugger;
+    
     let code = source.slice(0, -1);
 
     // 获取用户给当前loader传入的options
